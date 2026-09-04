@@ -1,5 +1,5 @@
 /*
-  Script: SQL_Como_criar_e_usar_Variaveis_no_SQL_Server_DECLARE_SET.sql
+  Script: SQL_Variaveis_DECLARE_SET.sql
   Vídeo: [SQL] Como criar e usar @Variáveis no SQL Server na prática (DECLARE + SET explicado)
   YouTube: https://www.youtube.com/watch?v=Igm14_DaSVQ
   Objetivo: Criar variáveis com DECLARE, atribuir com SET, exibir com PRINT e usar CASE WHEN

@@ -1,5 +1,5 @@
 /*
-  Script: SQL_Como_Fazer_Media_Movel_no_SQL_Server_Window_Functions_Comparacao_com_Excel.sql
+  Script: SQL_Media_Movel.sql
   Vídeo: [SQL] Como fazer média móvel no SQL Server (Window Functions) — comparação com Excel
   YouTube: https://www.youtube.com/watch?v=Vee5fI2On-Y
   Objetivo: Média móvel 6 e 12 meses com AVG() OVER (ROWS BETWEEN ... PRECEDING)

@@ -1,5 +1,5 @@
 /*
-  Script: SQL_Como_usar_SELECT_Alias_e_TOP_10_no_SQL_Server.sql
+  Script: SQL_SELECT_Alias_TOP.sql
   Vídeo: [SQL] Como usar SELECT, Alias e TOP 10 no SQL Server (com exemplos práticos)
   YouTube: https://www.youtube.com/watch?v=iY63k8jpD_k
   Objetivo: Selecionar colunas, limitar com TOP, renomear com Alias e explorar com SELECT *

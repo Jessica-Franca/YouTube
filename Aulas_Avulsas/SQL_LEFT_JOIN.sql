@@ -1,5 +1,5 @@
 /*
-  Script: SQL_LEFT_JOIN_no_SQL_Server_Como_Funciona_e_Quando_Usar.sql
+  Script: SQL_LEFT_JOIN.sql
   Vídeo: [SQL] LEFT JOIN no SQL Server: Como Funciona e Quando Usar (com exemplo real para iniciantes)
   YouTube: https://youtu.be/GmL4jGSuOPU
   Objetivo: Exemplo didático — todos os funcionários + ponto (inclui quem não bateu)
