@@ -132,13 +132,14 @@ Pasta: [`SQL/Curso-ETL-Completo`](./SQL/Curso-ETL-Completo/)
 | 6.3 | Dia a dia do analista (demanda real) | — | [Assistir](https://www.youtube.com/watch?v=vCNIeKiGKGo) |
 | 6.4 | Relatórios que geram ação (Power BI) | — | [Assistir](https://www.youtube.com/watch?v=qWCzOl9pLrM) |
 | 6.5 | Nunca fez um relatório? Comece assim | — | [Assistir](https://www.youtube.com/watch?v=OpOi39YaI1s) |
+| 6.6 | Dicas rápidas de Power BI (performance, parâmetros, DAX…) | — | [Lista completa](./PowerBI/Dicas-Rapidas/) |
 
-Outros vídeos de carreira/orientação ficam em [`Negocio/Carreira-Dados`](./Negocio/Carreira-Dados/) — use quando quiser, **fora** desta sequência técnica.
+Outros vídeos de carreira ficam em [`Negocio/Carreira-Dados`](./Negocio/Carreira-Dados/); dicas de Power BI em [`PowerBI/`](./PowerBI/) — use quando quiser, **fora** da sequência SQL/ETL.
 
 ---
 
 ## Em uma frase
 
-> Instale o banco → aprenda SELECT/WHERE/variável → **importe o CSV** → **automatize a Stage** → **monte histórico, dimensão e fato** → use o tempo liberado para analisar.
+> Instale o banco → aprenda SELECT/WHERE/variável → **importe o CSV** → **automatize a Stage** → **monte histórico, dimensão e fato** → use o tempo liberado para analisar (e refine o relatório no Power BI).
 
-As pastas `SQL/` e `Negocio/` continuam organizadas por tema; **esta página é a playlist mental** (e o roteiro para você montar uma playlist no YouTube com a mesma ordem, se quiser).
+As pastas por tema (`SQL/`, `PowerBI/`, `Negocio/`) continuam; **esta página é a playlist mental** (e o roteiro para montar uma playlist no YouTube com a mesma ordem, se quiser).

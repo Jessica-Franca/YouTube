@@ -21,4 +21,5 @@ Não sabe por onde começar? Siga a **[trilha recomendada](./COMECE-POR-AQUI.md)
 | Área | O que tem |
 |------|-----------|
 | [SQL](./SQL/) | Aulas avulsas, importar CSV no banco, ETL Completo |
+| [Power BI](./PowerBI/) | Dicas rápidas (performance, parâmetros, DAX, layout) |
 | [Negócio / Carreira em Dados](./Negocio/Carreira-Dados/) | Orientação e carreira (só links) |
