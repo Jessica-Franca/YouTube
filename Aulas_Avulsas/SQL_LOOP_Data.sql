@@ -1,7 +1,7 @@
-/*
+﻿/*
   Script: SQL_LOOP_Data.sql
   Vídeo: [SQL] Como criar um LOOP com data no SQL Server para processos de ETL
-  YouTube: https://youtu.be/Z4tMiRvUgJY
+  YouTube: https://www.youtube.com/watch?v=Z4tMiRvUgJY
   Objetivo: WHILE por data, MIN/MAX, pular datas vazias (performance) e INSERT em temp
   Como estudar: abra no SSMS, execute por partes e compare com o vídeo
   Banco: dbFilmesPixel
