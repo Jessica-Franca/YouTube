@@ -40,7 +40,7 @@ Comece pelo [`00_Script_Inicial.sql`](./Curso%20-%20ETL%20Completo/00_Script_Ini
 | 1 | Criar tabela Histórico | [`01_Create_Hist.sql`](./Curso%20-%20ETL%20Completo/01_Create_Hist.sql) | [Assistir](https://www.youtube.com/watch?v=v9UfGpuI0Gc) |
 | 2 | CONVERT + tabela temporária | [`02_Convert_Temp.sql`](./Curso%20-%20ETL%20Completo/02_Convert_Temp.sql) | [Assistir](https://www.youtube.com/watch?v=N82GIjWbKy0) |
 | 3 | INSERT INTO no Histórico | [`03_Insert_Hist.sql`](./Curso%20-%20ETL%20Completo/03_Insert_Hist.sql) | [Assistir](https://www.youtube.com/watch?v=kKSHBAJujzU) |
-| 4 | Procedure do Histórico | [`03_Insert_Hist.sql`](./Curso%20-%20ETL%20Completo/03_Insert_Hist.sql) · alt. [`04_Proc_Hist.sql`](./Curso%20-%20ETL%20Completo/04_Proc_Hist.sql) | [Assistir](https://www.youtube.com/watch?v=W2gKG-eCh2k) |
+| 4 | Procedure do Histórico | [`04_Proc_Hist.sql`](./Curso%20-%20ETL%20Completo/04_Proc_Hist.sql) | [Assistir](https://www.youtube.com/watch?v=W2gKG-eCh2k) |
 | 5 | MERGE no Histórico | [`05_Merge_Hist.sql`](./Curso%20-%20ETL%20Completo/05_Merge_Hist.sql) | [Assistir](https://www.youtube.com/watch?v=V8tWBXlMAtI) |
 | 6 | Dimensões + MERGE | [`06_Create_Dim.sql`](./Curso%20-%20ETL%20Completo/06_Create_Dim.sql) + [`06_Proc_Dim.sql`](./Curso%20-%20ETL%20Completo/06_Proc_Dim.sql) | [Assistir](https://www.youtube.com/watch?v=4h6_TkjIKho) |
 | 7 | Montar Tabela Fato (SELECT) | [`07_Select_Fato.sql`](./Curso%20-%20ETL%20Completo/07_Select_Fato.sql) | [Assistir](https://www.youtube.com/watch?v=YtdZfOOYTgI) |

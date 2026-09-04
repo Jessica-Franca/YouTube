@@ -1,126 +1,108 @@
-﻿/*
+/*
   Script: 04_Proc_Hist.sql
   V?deo: [SQL] Como Criar uma Procedure para Tabela de Hist?rico
   YouTube: https://www.youtube.com/watch?v=W2gKG-eCh2k
-  Objetivo: Procedure de carga hist?rica (loop por data + MERGE)
-  Observa??o: a aula de INSERT/NOT EXISTS usa 03_Insert_Hist.sql
+  Objetivo: Encapsular a carga do Hist?rico em procedure (WHILE por data + INSERT + NOT EXISTS)
+  Como estudar: compare com 03_Insert_Hist.sql ? mesma l?gica, agora com loop e procedure
   Banco: dbCallCenter ? Schema: ClienteX
 */
 
 USE [dbCallCenter]
 GO
 
-CREATE OR ALTER PROCEDURE [ClienteX].[PrcHistAtendimentoCSAT](
-				 @InitialDateCtrl	AS DATETIME
-				,@FinalDateCtrl		AS DATETIME
-)AS
-
+CREATE OR ALTER PROCEDURE [ClienteX].[PrcHistAtendimentoCSAT2]
+(
+	 @InitialDateCtrl	DATETIME
+	,@FinalDateCtrl		DATETIME
+)
+AS
 BEGIN
-	--DECLARE  @InitialDateCtrl	AS DATETIME = '20/09/2025'--CONVERT(DATETIME,'2025-09-20 00:00:00',120)
-	--		,@FinalDateCtrl		AS DATETIME = '25/09/2025'--CONVERT(DATETIME,'2025-09-30 23:59:59',120)
+	DECLARE
+		 @InsertedDateCtrl	DATETIME
+		,@DtIni				DATE
+		,@DtFim				DATE
 
-	DECLARE  @DataIni           AS DATE
-			,@DataFim           AS DATE
-			,@InsertedDateCtrl	AS DATETIME
+	-- DATETIME ? DATE: a hora ? descartada (ex.: 22/09/2025 00:00 ? 2025-09-22)
+	SET @InsertedDateCtrl = GETDATE()
+	SET @DtIni = @InitialDateCtrl
+	SET @DtFim = @FinalDateCtrl
 
-	SET @DataIni            = @InitialDateCtrl
-	SET @DataFim            = @FinalDateCtrl
-	SET @InsertedDateCtrl	= GETDATE()
+	-- Stage ? tipagem ? #Base (sem filtro: Stage traz tudo)
+	DROP TABLE IF EXISTS #Base
+	SELECT
+		 [Data_Hora_Contato]			= CONVERT(DATETIME, A.Data_Contato, 120)
+		,[Data_Contato]					= CONVERT(DATE, A.Data_Contato, 120)
+		,[Canal]
+		,[Produto]
+		,[Respondeu_Pesquisa]			= CONVERT(INT, A.[Respondeu_Pesquisa])
+		,[Nota_Satisfacao]				= CASE WHEN A.[Nota_Satisfacao] = '' THEN -1 ELSE CONVERT(INT, CONVERT(FLOAT, A.[Nota_Satisfacao])) END
+		,[Motivo_Satisfacao]
+		,[Tempo_Atendimento_Segundos]	= CONVERT(FLOAT, [Tempo_Atendimento_Segundos])
+		,[Tempo_Fila_Segundos]			= CONVERT(FLOAT, [Tempo_Fila_Segundos])
+		,[Tempo_Operacional_Segundos]	= CONVERT(FLOAT, [Tempo_Operacional_Segundos])
+		,[FCR]							= CASE WHEN A.[FCR] = '' THEN -1 ELSE CONVERT(INT, CONVERT(FLOAT, A.[FCR])) END
+		,[Matricula_Expert]				= CONVERT(INT, A.[Matricula_Expert])
+	INTO #Base
+	FROM [dbCallCenter].[ClienteX].[stgAtendimentoCSAT] AS A
 
-	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+	DROP TABLE IF EXISTS #BaseFim
+	SELECT
+		 *
+		,[InsertedDateCtrl] = @InsertedDateCtrl
+		,[InitialDateCtrl]  = @InitialDateCtrl
+		,[FinalDateCtrl]    = @FinalDateCtrl
+	INTO #BaseFim
+	FROM #Base
 
-	DROP TABLE IF EXISTS #BASE
-	SELECT 
-		 [Data_Hora_Contato]			= CONVERT(DATETIME, [Data_Contato],120)
-		,[Data_Contato]					= CONVERT(DATE, [Data_Contato],120)
-		,[Canal]						= [Canal]
-		,[Produto]						= [Produto]
-		,[Respondeu_Pesquisa]			= CONVERT(INT,[Respondeu_Pesquisa])
-		,[Nota_Satisfacao]				= CONVERT(INT,CONVERT(FLOAT, [Nota_Satisfacao]))
-		,[Motivo_Satisfacao]			= [Motivo_Satisfacao]
-		,[Tempo_Atendimento_Segundos]	= CONVERT(INT,CONVERT(FLOAT, [Tempo_Atendimento_Segundos]))
-		,[Tempo_Fila_Segundos]			= CONVERT(INT,CONVERT(FLOAT, [Tempo_Fila_Segundos]))
-		,[Tempo_Operacional_Segundos]	= CONVERT(INT,CONVERT(FLOAT, [Tempo_Operacional_Segundos]))
-		,[FCR]							= CONVERT(INT,CONVERT(FLOAT, [FCR]))
-		,[Matricula_Expert]				= CONVERT(INT,[Matricula_Expert])
-		,[data_insercao]				= CONVERT(DATE, [data_insercao], 126)
-		,[data_insercao_Hora]			= CONVERT(DATETIME, [data_insercao], 126)
-	INTO #BASE
-	FROM [dbCallCenter].[ClienteX].[stgAtendimentoCSAT] WITH(NOLOCK)
-
-	-- ============== LOOP M�S A M�S ==============
-	WHILE (@DataIni <= @DataFim)
+	-- Loop dia a dia: processa enquanto @DtIni <= @DtFim
+	WHILE (@DtIni <= @DtFim)
 	BEGIN
-		
-				DROP TABLE IF EXISTS #BASE_FIM
-				SELECT 
-				 * 
-				,InsertedDateCtrl	= @InsertedDateCtrl
-				,InitialDateCtrl	= @InitialDateCtrl	
-				,FinalDateCtrl		= @FinalDateCtrl
-				INTO #BASE_FIM
-				FROM #BASE A 
-				WHERE A.Data_Contato = @DataIni
+		-- PRINT @DtIni  -- ?til no estudo; no dia a dia pode remover
 
-				MERGE [dbCallCenter].[ClienteX].[HistAtendimentoCSAT] AS DESTINO -- TABELA QUE VAI RECEBER OS DADOS
-				USING #BASE_FIM AS ORIGEM -- TABELA QUE TEM OS DADOS GERADOS
-		
-						ON (	
-								DESTINO.[Data_Hora_Contato]	= ORIGEM.[Data_Hora_Contato]
-							AND DESTINO.[Matricula_Expert]	= ORIGEM.[Matricula_Expert]
-							AND DESTINO.[Canal]				= ORIGEM.[Canal]	
-							AND DESTINO.[Produto]			= ORIGEM.[Produto]
-							AND DESTINO.[Motivo_Satisfacao]	= ORIGEM.[Motivo_Satisfacao]
-							) -- COMPARA��O DOS DADOS PARA VER SE VAI FAZER UPDATE OU INSERT
-			
-						WHEN NOT MATCHED THEN -- SE N�O TIVER DADOS IGUAIS
+		INSERT INTO [dbCallCenter].[ClienteX].[HistAtendimentoCSAT]
+		(
+			 [Data_Hora_Contato]
+			,[Data_Contato]
+			,[Canal]
+			,[Produto]
+			,[Respondeu_Pesquisa]
+			,[Nota_Satisfacao]
+			,[Motivo_Satisfacao]
+			,[Tempo_Atendimento_Segundos]
+			,[Tempo_Fila_Segundos]
+			,[Tempo_Operacional_Segundos]
+			,[FCR]
+			,[Matricula_Expert]
+			,[InsertedDateCtrl]
+			,[InitialDateCtrl]
+			,[FinalDateCtrl]
+		)
+		SELECT *
+		FROM #BaseFim AS A
+		WHERE NOT EXISTS (
+			SELECT 1
+			FROM [dbCallCenter].[ClienteX].[HistAtendimentoCSAT] AS B
+			WHERE A.Data_Hora_Contato    = B.Data_Hora_Contato
+			  AND A.[Canal]              = B.[Canal]
+			  AND A.[Produto]            = B.[Produto]
+			  AND A.[Motivo_Satisfacao] = B.[Motivo_Satisfacao]
+			  AND A.[Matricula_Expert]   = B.[Matricula_Expert]
+		)
+		AND A.[Data_Contato] = @DtIni
 
-											INSERT (
-													 [Data_Hora_Contato]
-													,[Data_Contato]
-													,[Canal]
-													,[Produto]
-													,[Respondeu_Pesquisa]
-													,[Nota_Satisfacao]
-													,[Motivo_Satisfacao]
-													,[Tempo_Atendimento_Segundos]
-													,[Tempo_Fila_Segundos]
-													,[Tempo_Operacional_Segundos]
-													,[FCR]
-													,[Matricula_Expert]
-													,[InsertedDateCtrl]
-													,[InitialDateCtrl]
-													,[FinalDateCtrl]
-													) -- COLUNAS DA TABELA DESTINO 
+		-- Limpa dados j? processados na Stage (descomente em produ??o)
+		--DELETE FROM [dbCallCenter].[ClienteX].[stgAtendimentoCSAT]
+		--WHERE CONVERT(DATE, [Data_Contato], 120) = @DtIni
 
-											VALUES (
-													 ORIGEM.[Data_Hora_Contato]
-													,ORIGEM.[Data_Contato]
-													,ORIGEM.[Canal]
-													,ORIGEM.[Produto]
-													,ORIGEM.[Respondeu_Pesquisa]
-													,ORIGEM.[Nota_Satisfacao]
-													,ORIGEM.[Motivo_Satisfacao]
-													,ORIGEM.[Tempo_Atendimento_Segundos]
-													,ORIGEM.[Tempo_Fila_Segundos]
-													,ORIGEM.[Tempo_Operacional_Segundos]
-													,ORIGEM.[FCR]
-													,ORIGEM.[Matricula_Expert]
-													,ORIGEM.[InsertedDateCtrl]
-													,ORIGEM.[InitialDateCtrl]
-													,ORIGEM.[FinalDateCtrl]
-													); -- COLUNA DA TABELA ORIGEM
-				
-				PRINT('Data: '+convert(varchar,@DataIni)+' Processada')
-				
-				-- ============== Apaga dados j� processados ==============
-				
-				--DELETE FROM [dbCallCenter].[ClienteX].[stgAtendimentoCSAT]
-				--SELECT * FROM [dbCallCenter].[ClienteX].[stgAtendimentoCSAT]
-				--WHERE CONVERT(DATE, [Data_Contato],120) = @DataIni
-				SET 	@DataIni = DATEADD(DAY,1,@DataIni)
-
+		-- Obrigat?rio: sen?o vira loop infinito
+		SET @DtIni = DATEADD(DAY, 1, @DtIni)
 	END
-	DROP TABLE IF EXISTS #BASE,#BASE_FIM
+
+	DROP TABLE IF EXISTS #Base, #BaseFim
 END
---TRUNCATE TABLE [dbCallCenter].[ClienteX].[HistAtendimentoCSAT]
+GO
+
+-- Exemplo de execu??o (ajuste as datas ao que existe na Stage):
+-- EXEC [ClienteX].[PrcHistAtendimentoCSAT2]
+--	 @InitialDateCtrl = '24/09/2025 00:00:00'
+--	,@FinalDateCtrl   = '25/09/2025 23:59:59'

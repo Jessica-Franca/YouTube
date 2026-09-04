@@ -1,92 +1,98 @@
-ï»¿/*
+/*
   Script: 03_Insert_Hist.sql
-  Vï¿½deo: [SQL] Como Inserir Dados na Tabela Histï¿½rico com INSERT INTO
+  Vídeo: [SQL] Como Inserir Dados na Tabela Histórico com INSERT INTO
   YouTube: https://www.youtube.com/watch?v=kKSHBAJujzU
-  Tambï¿½m: [SQL] Como Criar uma Procedure para Tabela de Histï¿½rico
-  YouTube: https://www.youtube.com/watch?v=W2gKG-eCh2k
-  Objetivo: Procedure com CONVERT, #temp, WHILE e INSERT ... WHERE NOT EXISTS
-  Banco: dbCallCenter ï¿½ Schema: ClienteX
+  Objetivo: CONVERT + #temp + INSERT INTO no Histórico com WHERE NOT EXISTS
+  Como estudar: execute por partes no SSMS (igual ao vídeo)
+  Banco: dbCallCenter · Schema: ClienteX
 */
 
-USE [dbCallCenter]
-
-GO
-
-CREATE PROCEDURE [ClienteX].[PrcHistAtendimentoCSAT2] 
-(@InitialDateCtrl	DATETIME
-,@FinalDateCtrl		DATETIME)
-
-AS
-
-DECLARE 
- @InsertedDateCtrl	DATETIME
-,@DtIni				DATE
-,@DtFim				DATE
+DECLARE
+	 @InsertedDateCtrl	DATETIME
+	,@InitialDateCtrl	DATETIME
+	,@FinalDateCtrl		DATETIME
 
 SET @InsertedDateCtrl	= GETDATE()
-SET @DtIni = @InitialDateCtrl
-SET @DtFim = @FinalDateCtrl
+SET @InitialDateCtrl	= '22/09/2025 00:00:00'
+SET @FinalDateCtrl		= '30/09/2025 23:59:59'
 
+-- 1) Stage ? tipagem ? #Base
 DROP TABLE IF EXISTS #Base
 SELECT
-	 [Data_Hora_Contato]			=  CONVERT(DATETIME,A.Data_Contato,120)
-	,[Data_Contato]					=  CONVERT(DATE,A.Data_Contato,120)
+	 [Data_Hora_Contato]			= CONVERT(DATETIME, A.Data_Contato, 120)
+	,[Data_Contato]					= CONVERT(DATE, A.Data_Contato, 120)
 	,[Canal]
 	,[Produto]
-	,[Respondeu_Pesquisa]			= CONVERT(INT,A.[Respondeu_Pesquisa])
-	,[Nota_Satisfacao]				= CASE WHEN A.[Nota_Satisfacao] = '' THEN -1 ELSE CONVERT(INT,CONVERT(FLOAT,A.[Nota_Satisfacao])) END
+	,[Respondeu_Pesquisa]			= CONVERT(INT, A.[Respondeu_Pesquisa])
+	,[Nota_Satisfacao]				= CASE WHEN A.[Nota_Satisfacao] = '' THEN -1 ELSE CONVERT(INT, CONVERT(FLOAT, A.[Nota_Satisfacao])) END
 	,[Motivo_Satisfacao]
-	,[Tempo_Atendimento_Segundos]	= CONVERT(FLOAT,[Tempo_Atendimento_Segundos])
-	,[Tempo_Fila_Segundos]			= CONVERT(FLOAT,[Tempo_Fila_Segundos])
-	,[Tempo_Operacional_Segundos]	= CONVERT(FLOAT,[Tempo_Operacional_Segundos])
-	,[FCR]							= CASE WHEN A.[FCR] = '' THEN -1 ELSE CONVERT(INT,CONVERT(FLOAT,A.[FCR])) END
-	,[Matricula_Expert]				= CONVERT(INT,A.[Matricula_Expert]) 
+	,[Tempo_Atendimento_Segundos]	= CONVERT(FLOAT, [Tempo_Atendimento_Segundos])
+	,[Tempo_Fila_Segundos]			= CONVERT(FLOAT, [Tempo_Fila_Segundos])
+	,[Tempo_Operacional_Segundos]	= CONVERT(FLOAT, [Tempo_Operacional_Segundos])
+	,[FCR]							= CASE WHEN A.[FCR] = '' THEN -1 ELSE CONVERT(INT, CONVERT(FLOAT, A.[FCR])) END
+	,[Matricula_Expert]				= CONVERT(INT, A.[Matricula_Expert])
 INTO #Base
 FROM [dbCallCenter].[ClienteX].[stgAtendimentoCSAT] AS A
 
+-- 2) #Base + colunas de controle ? #BaseFim
 DROP TABLE IF EXISTS #BaseFim
 SELECT
-	*
+	 *
 	,[InsertedDateCtrl]	= @InsertedDateCtrl
 	,[InitialDateCtrl]	= @InitialDateCtrl
-	,[FinalDateCtrl	]	= @FinalDateCtrl	
+	,[FinalDateCtrl]	= @FinalDateCtrl
 INTO #BaseFim
 FROM #Base
 
-WHILE (@DtIni <= @DtFim)
-BEGIN
-	INSERT INTO [dbCallCenter].[ClienteX].[HistAtendimentoCSAT]
-		(	 [Data_Hora_Contato]
-			,[Data_Contato]					
-			,[Canal]
-			,[Produto]
-			,[Respondeu_Pesquisa]			
-			,[Nota_Satisfacao]				
-			,[Motivo_Satisfacao]
-			,[Tempo_Atendimento_Segundos]	
-			,[Tempo_Fila_Segundos]			
-			,[Tempo_Operacional_Segundos]	
-			,[FCR]							
-			,[Matricula_Expert]
-			,[InsertedDateCtrl]	
-			,[InitialDateCtrl]	
-			,[FinalDateCtrl]		
-			)
-	SELECT * FROM #BaseFim A
-	WHERE NOT EXISTS (SELECT 1 FROM [dbCallCenter].[ClienteX].[HistAtendimentoCSAT] B
-				WHERE		A.Data_Hora_Contato		 = B.Data_Hora_Contato
-						AND A.[Canal]				 = B.[Canal]
-						AND A.[Produto]				 = B.[Produto]
-						AND A.[Motivo_Satisfacao]	 = B.[Motivo_Satisfacao]
-						AND A.[Matricula_Expert]	 = B.[Matricula_Expert]
-						)
-	AND A.[Data_Contato] = @DtIni
+-- Conferência (como no vídeo)
+SELECT * FROM #BaseFim
 
-	-- Limpa dados jï¿½ processados
-	--DELETE FROM [dbCallCenter].[ClienteX].[stgAtendimentoCSAT]
-	--WHERE CONVERT(DATE, [Data_Contato],120) = @DtIni
+-- 3) Exemplo intermediário do vídeo: INSERT sem colunas de controle (a partir de #Base)
+-- INSERT INTO [dbCallCenter].[ClienteX].[HistAtendimentoCSAT]
+-- (
+-- 	 [Data_Hora_Contato]
+-- 	,[Data_Contato]
+-- 	,[Canal]
+-- 	,[Produto]
+-- 	,[Respondeu_Pesquisa]
+-- 	,[Nota_Satisfacao]
+-- 	,[Motivo_Satisfacao]
+-- 	,[Tempo_Atendimento_Segundos]
+-- 	,[Tempo_Fila_Segundos]
+-- 	,[Tempo_Operacional_Segundos]
+-- 	,[FCR]
+-- 	,[Matricula_Expert]
+-- )
+-- SELECT * FROM #Base
 
-				
-	SET @DtIni = DATEADD(DAY,1,@DtIni)
-END
-DROP TABLE IF EXISTS #Base, #BaseFim
+-- 4) Versão final: INSERT com controle + WHERE NOT EXISTS (evita duplicidade)
+INSERT INTO [dbCallCenter].[ClienteX].[HistAtendimentoCSAT]
+(
+	 [Data_Hora_Contato]
+	,[Data_Contato]
+	,[Canal]
+	,[Produto]
+	,[Respondeu_Pesquisa]
+	,[Nota_Satisfacao]
+	,[Motivo_Satisfacao]
+	,[Tempo_Atendimento_Segundos]
+	,[Tempo_Fila_Segundos]
+	,[Tempo_Operacional_Segundos]
+	,[FCR]
+	,[Matricula_Expert]
+	,[InsertedDateCtrl]
+	,[InitialDateCtrl]
+	,[FinalDateCtrl]
+)
+SELECT * FROM #BaseFim AS A
+WHERE NOT EXISTS (
+	SELECT 1
+	FROM [dbCallCenter].[ClienteX].[HistAtendimentoCSAT] AS B
+	WHERE A.Data_Hora_Contato    = B.Data_Hora_Contato
+	  AND A.[Canal]              = B.[Canal]
+	  AND A.[Produto]            = B.[Produto]
+	  AND A.[Motivo_Satisfacao] = B.[Motivo_Satisfacao]
+	  AND A.[Matricula_Expert]   = B.[Matricula_Expert]
+)
+
+-- SELECT * FROM [dbCallCenter].[ClienteX].[HistAtendimentoCSAT]
