@@ -1,6 +1,7 @@
 /*
   Script: 006-bulk-insert-explicado.sql
   Vídeo: [006] Importar CSV no SQL Server sem copiar no Excel | BULK INSERT passo a passo
+  YouTube: https://www.youtube.com/watch?v=kw2IyCl06xI
   Objetivo: Demo didática — BULK INSERT na tabela temporária #Tmp
   Pré-requisito: prep-01-criar-banco.sql, prep-02-criar-schemas.sql
   Banco: dbBaseHistoricaVendasRoupas

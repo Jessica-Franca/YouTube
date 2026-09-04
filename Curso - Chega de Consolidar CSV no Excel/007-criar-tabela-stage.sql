@@ -1,6 +1,7 @@
 ﻿/*
   Script: 007-criar-tabela-stage.sql
   Vídeo: [007] Criar tabela Stage no SQL Server (IF, OBJECT_ID e colunas de controle)
+  YouTube: https://www.youtube.com/watch?v=m_A1oKcE6PY
   Objetivo: Criar tabela Stage.StgVendasRoupas (dados + colunas de controle)
   Banco: dbBaseHistoricaVendasRoupas
 
