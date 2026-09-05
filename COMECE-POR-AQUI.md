@@ -1,5 +1,11 @@
 # Comece por aqui — trilha recomendada
 
+Assista primeiro à apresentação (o que é a trilha e como usar o GitHub):
+
+[![Portfólio do Zero: Trilha SQL + ETL + Power BI (GitHub)](https://img.youtube.com/vi/Yl9zn2lmxBk/hqdefault.jpg)](https://www.youtube.com/watch?v=Yl9zn2lmxBk)
+
+**[▶ Portfólio do Zero: Trilha SQL + ETL + Power BI (GitHub)](https://www.youtube.com/watch?v=Yl9zn2lmxBk)** · ~6 min
+
 Ordem de estudo **pensada para quem está começando**, misturando vídeos de negócio e scripts SQL.  
 Não segue a ordem das playlists do YouTube — segue o fluxo real do trabalho:
 
@@ -34,7 +40,6 @@ Antes de digitar SQL: entender **por que** banco, ETL e automação importam.
 | 0.1 | Power BI sozinho não basta — SQL e ETL | [Assistir](https://www.youtube.com/watch?v=uZnpdC01Pns) |
 | 0.2 | O que todo analista precisa saber sobre ETL e SQL | [Assistir](https://www.youtube.com/watch?v=YwtpinfAM5U) |
 | 0.3 | ETL para iniciantes: depois de entender a origem dos dados | [Assistir](https://www.youtube.com/watch?v=1BjIneRkn4Q) |
-| 0.4 | (Opcional) Quer entrar na área? Método que funciona | [Assistir](https://www.youtube.com/watch?v=qJs3kBHdJuI) |
 
 **Próximo passo:** instalar o ambiente.
 
