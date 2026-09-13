@@ -29,3 +29,4 @@ Não sabe por onde começar? Assista à apresentação da trilha e depois siga o
 | [Bases fakes](./BasesFakes/) | CSVs de exemplo para praticar (ex.: histórico do estúdio) |
 | [Power BI](./PowerBI/) | Dicas rápidas (performance, parâmetros, DAX, layout) |
 | [Negócio / Carreira em Dados](./Negocio/Carreira-Dados/) | Orientação e carreira (só links) |
+| [Capas YouTube](./Capas.md) | Thumbnails no Figma (arquivo Thumbnail) |
