@@ -87,7 +87,7 @@ Objetivo: arquivo na pasta → dado no SQL Server, de forma repetível.
 | 3.3 | INSERT INTO na Stage | [`008-insert-into-stage.sql`](./SQL/Curso-Importar-CSV-SQL/008-insert-into-stage.sql) | [Assistir](https://www.youtube.com/watch?v=Qk52PNxX_24) |
 | 3.4 | Variáveis na importação | [`009-variaveis-importacao-csv.sql`](./SQL/Curso-Importar-CSV-SQL/009-variaveis-importacao-csv.sql) | [Assistir](https://www.youtube.com/watch?v=b6j5hwZ7NW4) |
 | 3.5 | Script → procedure de carga | [`010-criar-proc-stg-vendas-roupas.sql`](./SQL/Curso-Importar-CSV-SQL/010-criar-proc-stg-vendas-roupas.sql) | [Assistir](https://www.youtube.com/watch?v=wN--o_yIgsw) |
-| Extra | Prática com outra base (estúdio): BULK INSERT + Stage | [`SQL_BULK_INSERT_CSV_Stage_Studio.sql`](./SQL/Aulas-Avulsas/SQL_BULK_INSERT_CSV_Stage_Studio.sql) · [CSV](./BasesFakes/historico_studio.csv) | a publicar |
+| Extra | Prática com outra base (estúdio): BULK INSERT + Stage | [`SQL_BULK_INSERT_CSV_Stage_Studio.sql`](./SQL/Aulas-Avulsas/SQL_BULK_INSERT_CSV_Stage_Studio.sql) · [CSV](./BasesFakes/historico_studio.csv) | [Assistir](https://www.youtube.com/watch?v=5ISu6r8Cad0) |
 
 **Próximo passo:** entender automação e organização — depois montar o modelo (histórico / dim / fato).
 

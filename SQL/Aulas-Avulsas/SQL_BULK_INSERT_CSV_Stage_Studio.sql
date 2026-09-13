@@ -1,7 +1,7 @@
 /*
   Script: SQL_BULK_INSERT_CSV_Stage_Studio.sql
   Vídeo: Como importar CSV no SQL Server com BULK INSERT (e criar a Stage)
-  YouTube: a publicar
+  YouTube: https://www.youtube.com/watch?v=5ISu6r8Cad0
   Objetivo: CSV -> tabela temporaria -> BULK INSERT -> Stage.StgStudio (SELECT INTO) e validar as linhas
   Como estudar:
     1. Baixe o CSV: BasesFakes/historico_studio.csv
