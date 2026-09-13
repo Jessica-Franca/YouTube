@@ -6,6 +6,6 @@ Cursos e aulas com scripts para praticar no SSMS.
 
 | Curso | Descrição |
 |-------|-----------|
-| [Aulas-Avulsas](./Aulas-Avulsas/) | SELECT, WHERE, variáveis, LOOP, LEFT JOIN, média móvel |
+| [Aulas-Avulsas](./Aulas-Avulsas/) | SELECT, WHERE, variáveis, LOOP, LEFT JOIN, média móvel, BULK INSERT + Stage |
 | [Curso-Importar-CSV-SQL](./Curso-Importar-CSV-SQL/) | Importar CSV para o banco com SQL (BULK INSERT → Stage → procedure) |
 | [Curso-ETL-Completo](./Curso-ETL-Completo/) | Histórico → Dimensões → Fato (depois da Stage) |
