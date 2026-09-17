@@ -2,7 +2,7 @@
 
 Playlist (índice): [Dicas Rápidas de Power BI](https://www.youtube.com/playlist?list=PLjC-yd8c5Jp25EVbvoNJRg0ZIXyVQJCsA)
 
-Aulas práticas e curtas (sem arquivo nesta pasta — só links).
+Aulas práticas e curtas. A maioria é só o link do vídeo. A aula de RLS tem o DAX nesta pasta.
 
 **Assistir** abre só aquele vídeo (não a playlist).
 
@@ -21,3 +21,4 @@ Aulas práticas e curtas (sem arquivo nesta pasta — só links).
 | 11 | Layout profissional no Power BI com Figma | 12:43 | [Assistir](https://www.youtube.com/watch?v=3uFKBwreVDM) |
 | 12 | Measure Killer: relacionamento e tabela usada como referência | 8:31 | [Assistir](https://www.youtube.com/watch?v=XlLfFLSp320) |
 | 13 | Measure Killer: parâmetro sem uso e relacionamento | 10:53 | [Assistir](https://www.youtube.com/watch?v=2IqS0q5d1u4) |
+| 14 | RLS: segurança em nível de linha (videogame) | — | Material: [`RLS-seguranca-nivel-linha.md`](./RLS-seguranca-nivel-linha.md) |
