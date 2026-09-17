@@ -5,7 +5,7 @@ Material da aula de RLS (Row-Level Security) no relatório de vendas de videogam
 **RLS** = Row-Level Security = **segurança em nível de linha**.  
 Cada pessoa abre o mesmo arquivo e vê só as linhas que ela pode ver.
 
-YouTube: (cola o link do vídeo aqui quando publicar)  
+YouTube: https://www.youtube.com/watch?v=zP4t413fshk  
 Canal: [youtube.com/@mundomis](https://www.youtube.com/@mundomis)
 
 Copie os blocos para o seu `.pbix`. Nomes sem espaço (PascalCase).
