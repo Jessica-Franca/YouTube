@@ -25,6 +25,7 @@ Cada passo: **por quê** → **o que assistir** → **o que praticar** (quando h
 | 1 | Instalar SQL Server + SSMS | [Importar CSV](./SQL/Curso-Importar-CSV-SQL/) |
 | 2 | SQL do dia a dia (SELECT, filtro, variável) | [Aulas avulsas](./SQL/Aulas-Avulsas/) |
 | 3 | Importar CSV → Stage → procedure | [Importar CSV](./SQL/Curso-Importar-CSV-SQL/) |
+| 3 extra | Mini curso Base Studio: CSV → Stage → Histórico | [Curso-Studio](./SQL/Curso-Studio/) |
 | 4 | Por que automatizar e como organizar o projeto | Negócio |
 | 5 | Stage → Histórico → Dimensão → Fato | [ETL Completo](./SQL/Curso-ETL-Completo/) |
 | 6 | Reforço (JOIN, LOOP, média móvel) + carreira | Avulsas + Negócio |
@@ -87,7 +88,23 @@ Objetivo: arquivo na pasta → dado no SQL Server, de forma repetível.
 | 3.3 | INSERT INTO na Stage | [`008-insert-into-stage.sql`](./SQL/Curso-Importar-CSV-SQL/008-insert-into-stage.sql) | [Assistir](https://www.youtube.com/watch?v=Qk52PNxX_24) |
 | 3.4 | Variáveis na importação | [`009-variaveis-importacao-csv.sql`](./SQL/Curso-Importar-CSV-SQL/009-variaveis-importacao-csv.sql) | [Assistir](https://www.youtube.com/watch?v=b6j5hwZ7NW4) |
 | 3.5 | Script → procedure de carga | [`010-criar-proc-stg-vendas-roupas.sql`](./SQL/Curso-Importar-CSV-SQL/010-criar-proc-stg-vendas-roupas.sql) | [Assistir](https://www.youtube.com/watch?v=wN--o_yIgsw) |
-| Extra | Mini curso (estúdio): CSV → Stage → Histórico | [`SQL/Curso-Studio`](./SQL/Curso-Studio/) · [CSV](./BasesFakes/historico_studio.csv) | [Aula 1](https://www.youtube.com/watch?v=5ISu6r8Cad0) |
+
+Pasta: [`SQL/Curso-Importar-CSV-SQL`](./SQL/Curso-Importar-CSV-SQL/)
+
+### Prática extra — Mini curso SQL: Base Studio (salão de beleza)
+
+Mesma lógica (CSV → Stage → Histórico), numa base menor de salão de beleza.
+
+Playlist: [Mini curso SQL: Base Studio (Salão de beleza)](https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U)  
+CSV: [`BasesFakes/historico_studio.csv`](./BasesFakes/historico_studio.csv)  
+Pasta: [`SQL/Curso-Studio`](./SQL/Curso-Studio/)
+
+| Ordem | Faça isto | Script | Link |
+|------|-----------|--------|------|
+| 3.E1 | BULK INSERT + criar a Stage | [`01_BULK_INSERT_CSV_Stage.sql`](./SQL/Curso-Studio/01_BULK_INSERT_CSV_Stage.sql) | [Assistir](https://www.youtube.com/watch?v=5ISu6r8Cad0) |
+| 3.E2 | Criar o Histórico e inserir os dados da Stage | [`02_Create_HistStudio.sql`](./SQL/Curso-Studio/02_Create_HistStudio.sql) · [`03_Insert_HistStudio.sql`](./SQL/Curso-Studio/03_Insert_HistStudio.sql) | [Assistir](https://www.youtube.com/watch?v=oTvTQ4SgFqA) |
+
+Os scripts 2 e 3 estão no mesmo vídeo.
 
 **Próximo passo:** entender automação e organização — depois montar o modelo (histórico / dim / fato).
 
@@ -115,7 +132,7 @@ Comece pelo [`00_Script_Inicial.sql`](./SQL/Curso-ETL-Completo/00_Script_Inicial
 | 5.3 | INSERT no Histórico | [`03_Insert_Hist.sql`](./SQL/Curso-ETL-Completo/03_Insert_Hist.sql) | [Assistir](https://www.youtube.com/watch?v=kKSHBAJujzU) |
 | 5.4 | Procedure do Histórico | [`04_Proc_Hist.sql`](./SQL/Curso-ETL-Completo/04_Proc_Hist.sql) | [Assistir](https://www.youtube.com/watch?v=W2gKG-eCh2k) |
 | 5.5 | MERGE no Histórico | [`05_Merge_Hist.sql`](./SQL/Curso-ETL-Completo/05_Merge_Hist.sql) | [Assistir](https://www.youtube.com/watch?v=V8tWBXlMAtI) |
-| 5.6 | Dimensões + MERGE | [`06_Create_Dim.sql`](./SQL/Curso-ETL-Completo/06_Create_Dim.sql) · [`06_Proc_Dim.sql`](./SQL/Curso-ETL-Completo/06_Proc_Dim.sql) | [Assistir](https://www.youtube.com/watch?v=4h6_TkjIKho) |
+| 5.6 | Dimensões + MERGE | [`06_Create_Dim.sql`](./SQL/Curso-ETL-Completo/06_Create_Dim.sql) | [Assistir](https://www.youtube.com/watch?v=4h6_TkjIKho) |
 | 5.7 | Montar Fato (SELECT) | [`07_Select_Fato.sql`](./SQL/Curso-ETL-Completo/07_Select_Fato.sql) | [Assistir](https://www.youtube.com/watch?v=YtdZfOOYTgI) |
 | 5.8 | Fato com MERGE | [`08_Create_Fato.sql`](./SQL/Curso-ETL-Completo/08_Create_Fato.sql) · [`08_Proc_Fato.sql`](./SQL/Curso-ETL-Completo/08_Proc_Fato.sql) | [Assistir](https://www.youtube.com/watch?v=RzKSyF4YOII) |
 

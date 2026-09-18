@@ -1,6 +1,8 @@
-# Mini curso — Estúdio (CSV → Stage → Histórico)
+# Mini curso SQL: Base Studio (Salão de beleza)
 
-Prática com a base fake do estúdio. Mesma lógica do ETL, em três passos, numa base menor.
+Prática com a Base Studio, uma base fake de salão de beleza. Mesma lógica do ETL, em três passos, numa base menor.
+
+Playlist (índice): [Mini curso SQL: Base Studio (Salão de beleza)](https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U)
 
 **Fluxo:** `historico_studio.csv` → `#TmpStgStudio` → `Stage.StgStudio` → `Historico.HistStudio`
 
@@ -8,13 +10,13 @@ CSV: [`../../BasesFakes/historico_studio.csv`](../../BasesFakes/historico_studio
 
 Banco de estudo: `dbTestes` (ou outro banco de teste).
 
-**Assistir** abre só aquele vídeo.
+**Assistir** abre só aquele vídeo (não a playlist). Os scripts 2 e 3 estão no mesmo vídeo.
 
 | # | Tema | Script | YouTube |
 |---|------|--------|---------|
 | 1 | BULK INSERT + criar a Stage | [`01_BULK_INSERT_CSV_Stage.sql`](./01_BULK_INSERT_CSV_Stage.sql) | [Assistir](https://www.youtube.com/watch?v=5ISu6r8Cad0) |
-| 2 | Criar tabela Histórico (`HistStudio`) | [`02_Create_HistStudio.sql`](./02_Create_HistStudio.sql) | (link quando publicar) |
-| 3 | CONVERT + INSERT no Histórico | [`03_Insert_HistStudio.sql`](./03_Insert_HistStudio.sql) | (link quando publicar) |
+| 2 | Criar tabela Histórico (`HistStudio`) | [`02_Create_HistStudio.sql`](./02_Create_HistStudio.sql) | [Assistir](https://www.youtube.com/watch?v=oTvTQ4SgFqA) |
+| 3 | CONVERT + INSERT no Histórico | [`03_Insert_HistStudio.sql`](./03_Insert_HistStudio.sql) | [Assistir](https://www.youtube.com/watch?v=oTvTQ4SgFqA) |
 
 A aula 1 também aparece em [Aulas avulsas](../Aulas-Avulsas/) (mesmo vídeo). Aqui ela entra na sequência do mini curso.
 

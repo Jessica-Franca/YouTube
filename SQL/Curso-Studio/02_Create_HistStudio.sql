@@ -1,8 +1,9 @@
 /*
   Script: 02_Create_HistStudio.sql
-  Mini curso: Estúdio (CSV → Stage → Histórico) — aula 2/3
-  Vídeo: Criar a tabela Histórico do estúdio (HistStudio)
-  YouTube: (cola o link do vídeo aqui quando publicar)
+  Mini curso: Base Studio (salão de beleza) — CSV → Stage → Histórico — aula 2/3
+  Vídeo: Como criar o Histórico no SQL Server e inserir dados da Stage
+  YouTube: https://www.youtube.com/watch?v=oTvTQ4SgFqA
+  Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U
   Objetivo: Criar Historico.HistStudio com tipos corretos e colunas de controle
   Como estudar: execute no SSMS depois da aula 1 (Stage.StgStudio já existe)
   Banco: dbTestes (ou outro banco de teste)

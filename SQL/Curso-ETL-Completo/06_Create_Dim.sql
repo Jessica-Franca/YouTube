@@ -3,7 +3,7 @@
   Vídeo: [SQL] Criando DIMENSÕES (Canal, Produto e Motivo) + Procedure com MERGE
   YouTube: https://www.youtube.com/watch?v=4h6_TkjIKho
   Objetivo: Criar DimCanal, DimProduto e DimMotivoSatisfacao
-  Próximo: 06_Proc_Dim.sql
+  Próximo: a procedure com MERGE está no mesmo vídeo; o script 06_Proc_Dim.sql ainda não está nesta pasta
   Banco: dbCallCenter · Schema: ClienteX
 */
 

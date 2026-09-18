@@ -12,13 +12,14 @@ Scripts soltos das aulas de SQL no YouTube.
 | 4 | LOOP com data (ETL) | [`SQL_LOOP_Data.sql`](./SQL_LOOP_Data.sql) | [Assistir](https://www.youtube.com/watch?v=Z4tMiRvUgJY) |
 | 5 | LEFT JOIN | [`SQL_LEFT_JOIN.sql`](./SQL_LEFT_JOIN.sql) | [Assistir](https://www.youtube.com/watch?v=GmL4jGSuOPU) |
 | 6 | Média móvel | [`SQL_Media_Movel.sql`](./SQL_Media_Movel.sql) | [Assistir](https://www.youtube.com/watch?v=Vee5fI2On-Y) |
-| 7 | BULK INSERT CSV + Stage (estúdio) | [`SQL_BULK_INSERT_CSV_Stage_Studio.sql`](./SQL_BULK_INSERT_CSV_Stage_Studio.sql) | [Assistir](https://www.youtube.com/watch?v=5ISu6r8Cad0) |
+| 7 | BULK INSERT CSV + Stage (Base Studio) | [`SQL_BULK_INSERT_CSV_Stage_Studio.sql`](./SQL_BULK_INSERT_CSV_Stage_Studio.sql) | [Assistir](https://www.youtube.com/watch?v=5ISu6r8Cad0) |
 
-## Aula 7 — CSV no SQL Server (estúdio)
+## Aula 7 — CSV no SQL Server (Base Studio)
 
 Arquivos desta aula:
 
 - Vídeo: [Assistir no YouTube](https://www.youtube.com/watch?v=5ISu6r8Cad0)
+- Playlist: [Mini curso SQL: Base Studio (Salão de beleza)](https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U)
 - Script: [`SQL_BULK_INSERT_CSV_Stage_Studio.sql`](./SQL_BULK_INSERT_CSV_Stage_Studio.sql)
 - CSV (base fake): [`../../BasesFakes/historico_studio.csv`](../../BasesFakes/historico_studio.csv)
 
@@ -31,4 +32,4 @@ Como praticar:
 
 O `BULK INSERT` lê o arquivo do **disco da máquina**, não direto do GitHub. Por isso o CSV precisa ser baixado primeiro.
 
-**Continuação:** essa aula é o passo 1 do [mini curso Estúdio](../Curso-Studio/) (Stage → Histórico).
+**Continuação:** essa aula é o passo 1 do [mini curso SQL: Base Studio](../Curso-Studio/) ([playlist](https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U)). Próximo vídeo: [criar o Histórico e inserir os dados](https://www.youtube.com/watch?v=oTvTQ4SgFqA).

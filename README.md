@@ -25,7 +25,7 @@ Não sabe por onde começar? Assista à apresentação da trilha e depois siga o
 
 | Área | O que tem |
 |------|-----------|
-| [SQL](./SQL/) | Aulas avulsas, importar CSV, mini curso Estúdio, ETL Completo |
-| [Bases fakes](./BasesFakes/) | CSVs de exemplo para praticar (ex.: histórico do estúdio) |
+| [SQL](./SQL/) | Aulas avulsas, importar CSV, mini curso Base Studio, ETL Completo |
+| [Bases fakes](./BasesFakes/) | CSVs de exemplo para praticar (ex.: histórico da Base Studio) |
 | [Power BI](./PowerBI/) | Dicas rápidas (performance, parâmetros, DAX, layout) |
 | [Negócio / Carreira em Dados](./Negocio/Carreira-Dados/) | Orientação e carreira (só links) |

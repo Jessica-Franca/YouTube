@@ -1,8 +1,9 @@
 /*
   Script: 03_Insert_HistStudio.sql
-  Mini curso: Estúdio (CSV → Stage → Histórico) — aula 3/3
-  Vídeo: CONVERT + INSERT da Stage para o Histórico (HistStudio)
-  YouTube: (cola o link do vídeo aqui quando publicar)
+  Mini curso: Base Studio (salão de beleza) — CSV → Stage → Histórico — aula 3/3
+  Vídeo: Como criar o Histórico no SQL Server e inserir dados da Stage
+  YouTube: https://www.youtube.com/watch?v=oTvTQ4SgFqA
+  Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U
   Objetivo: Tipar Stage.StgStudio (CONVERT) em #temp e gravar em Historico.HistStudio
   Como estudar: execute por partes no SSMS (igual ao vídeo)
   Banco: dbTestes (ou outro banco de teste)
