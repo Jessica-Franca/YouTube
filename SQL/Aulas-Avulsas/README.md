@@ -30,3 +30,5 @@ Como praticar:
 4. Execute por partes (criar temp → BULK INSERT → SELECT INTO na Stage → COUNT / TOP 5)
 
 O `BULK INSERT` lê o arquivo do **disco da máquina**, não direto do GitHub. Por isso o CSV precisa ser baixado primeiro.
+
+**Continuação:** essa aula é o passo 1 do [mini curso Estúdio](../Curso-Studio/) (Stage → Histórico).

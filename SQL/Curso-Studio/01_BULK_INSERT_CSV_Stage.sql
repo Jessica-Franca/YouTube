@@ -1,5 +1,6 @@
 /*
-  Script: SQL_BULK_INSERT_CSV_Stage_Studio.sql
+  Script: 01_BULK_INSERT_CSV_Stage.sql
+  Mini curso: Estúdio (CSV → Stage → Histórico) — aula 1/3
   Vídeo: Como importar CSV no SQL Server com BULK INSERT (e criar a Stage)
   YouTube: https://www.youtube.com/watch?v=5ISu6r8Cad0
   Objetivo: CSV -> tabela temporaria -> BULK INSERT -> Stage.StgStudio (SELECT INTO) e validar as linhas
@@ -10,7 +11,7 @@
     4. Execute por partes no SSMS e compare com o video
   Banco: dbTestes (ou outro banco de teste)
   CSV: BasesFakes/historico_studio.csv
-  Continuação: SQL/Curso-Studio (02 criar Hist + 03 INSERT no Hist)
+  Proximo: 02_Create_HistStudio.sql
 */
 
 USE [dbTestes];
