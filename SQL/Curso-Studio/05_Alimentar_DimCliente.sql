@@ -2,7 +2,7 @@
   Script: 05_Alimentar_DimCliente.sql
   Mini curso: Base Studio (salão de beleza) — aula 3 (dimensão de cliente)
   Vídeo: Como criar a Dimensão de Cliente no SQL Server (modelo estrela)
-  YouTube: continuação de https://www.youtube.com/watch?v=oTvTQ4SgFqA (link deste vídeo entra quando publicar)
+  YouTube: https://www.youtube.com/watch?v=32RLwGQYSMs
   Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U
   Objetivo: Trazer clientes distintos do Histórico e inserir na DimCliente só o que ainda não existe
   Como estudar: execute por partes no SSMS (igual ao vídeo). A janela de data usa DATEADD +1 dia de propósito.

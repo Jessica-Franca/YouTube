@@ -2,7 +2,7 @@
   Script: 06_Select_Fato.sql
   Mini curso: Base Studio (salão de beleza) — aula 3 (prévia da fato)
   Vídeo: Como criar a Dimensão de Cliente no SQL Server (modelo estrela)
-  YouTube: continuação de https://www.youtube.com/watch?v=oTvTQ4SgFqA (link deste vídeo entra quando publicar)
+  YouTube: https://www.youtube.com/watch?v=32RLwGQYSMs
   Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U
   Objetivo: Prévia da fato — data do atendimento, idCliente e quantidade (LEFT JOIN na DimCliente)
   Como estudar: execute depois de alimentar a DimCliente. Cliente sem match vira -1 (Não Mapeado).

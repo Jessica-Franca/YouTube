@@ -103,7 +103,7 @@ Pasta: [`SQL/Curso-Studio`](./SQL/Curso-Studio/)
 |------|-----------|--------|------|
 | 3.E1 | BULK INSERT + criar a Stage | [`01_BULK_INSERT_CSV_Stage.sql`](./SQL/Curso-Studio/01_BULK_INSERT_CSV_Stage.sql) | [Assistir](https://www.youtube.com/watch?v=5ISu6r8Cad0) |
 | 3.E2 | Criar o Histórico e inserir os dados da Stage | [`02_Create_HistStudio.sql`](./SQL/Curso-Studio/02_Create_HistStudio.sql) · [`03_Insert_HistStudio.sql`](./SQL/Curso-Studio/03_Insert_HistStudio.sql) | [Assistir](https://www.youtube.com/watch?v=oTvTQ4SgFqA) |
-| 3.E3 | Dimensão de cliente e prévia da fato | [`04_Create_DimCliente.sql`](./SQL/Curso-Studio/04_Create_DimCliente.sql) · [`05_Alimentar_DimCliente.sql`](./SQL/Curso-Studio/05_Alimentar_DimCliente.sql) · [`06_Select_Fato.sql`](./SQL/Curso-Studio/06_Select_Fato.sql) | em publicação |
+| 3.E3 | Dimensão de cliente e prévia da fato | [`04_Create_DimCliente.sql`](./SQL/Curso-Studio/04_Create_DimCliente.sql) · [`05_Alimentar_DimCliente.sql`](./SQL/Curso-Studio/05_Alimentar_DimCliente.sql) · [`06_Select_Fato.sql`](./SQL/Curso-Studio/06_Select_Fato.sql) | [Assistir](https://www.youtube.com/watch?v=32RLwGQYSMs) |
 
 Os scripts 2 e 3 estão no mesmo vídeo. Os scripts 4, 5 e 6 estão no vídeo seguinte.
 

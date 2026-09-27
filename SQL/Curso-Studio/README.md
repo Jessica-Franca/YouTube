@@ -17,11 +17,13 @@ Banco de estudo: `dbTestes` (ou outro banco de teste).
 | 1 | BULK INSERT + criar a Stage | [`01_BULK_INSERT_CSV_Stage.sql`](./01_BULK_INSERT_CSV_Stage.sql) | [Assistir](https://www.youtube.com/watch?v=5ISu6r8Cad0) |
 | 2 | Criar tabela Histórico (`HistStudio`) | [`02_Create_HistStudio.sql`](./02_Create_HistStudio.sql) | [Assistir](https://www.youtube.com/watch?v=oTvTQ4SgFqA) |
 | 3 | CONVERT + INSERT no Histórico | [`03_Insert_HistStudio.sql`](./03_Insert_HistStudio.sql) | [Assistir](https://www.youtube.com/watch?v=oTvTQ4SgFqA) |
-| 4 | Criar `DataMart.DimCliente` (registro -1) | [`04_Create_DimCliente.sql`](./04_Create_DimCliente.sql) | em publicação |
-| 5 | Alimentar a DimCliente sem duplicar | [`05_Alimentar_DimCliente.sql`](./05_Alimentar_DimCliente.sql) | em publicação |
-| 6 | Prévia da fato (data, cliente, quantidade) | [`06_Select_Fato.sql`](./06_Select_Fato.sql) | em publicação |
+| 4 | Criar `DataMart.DimCliente` (registro -1) | [`04_Create_DimCliente.sql`](./04_Create_DimCliente.sql) | [Assistir](https://www.youtube.com/watch?v=32RLwGQYSMs) |
+| 5 | Alimentar a DimCliente sem duplicar | [`05_Alimentar_DimCliente.sql`](./05_Alimentar_DimCliente.sql) | [Assistir](https://www.youtube.com/watch?v=32RLwGQYSMs) |
+| 6 | Prévia da fato (data, cliente, quantidade) | [`06_Select_Fato.sql`](./06_Select_Fato.sql) | [Assistir](https://www.youtube.com/watch?v=32RLwGQYSMs) |
 
 A aula 1 também aparece em [Aulas avulsas](../Aulas-Avulsas/) (mesmo vídeo). Aqui ela entra na sequência do mini curso.
+
+Título, descrição e capítulos da aula 3: [`aula-03-youtube.md`](./aula-03-youtube.md).
 
 ## Como estudar
 

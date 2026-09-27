@@ -2,7 +2,7 @@
   Script: 04_Create_DimCliente.sql
   Mini curso: Base Studio (salão de beleza) — aula 3 (dimensão de cliente)
   Vídeo: Como criar a Dimensão de Cliente no SQL Server (modelo estrela)
-  YouTube: continuação de https://www.youtube.com/watch?v=oTvTQ4SgFqA (link deste vídeo entra quando publicar)
+  YouTube: https://www.youtube.com/watch?v=32RLwGQYSMs
   Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U
   Objetivo: Criar DataMart.DimCliente, o registro -1 (Não Mapeado) e o índice único em cliente
   Como estudar: execute no SSMS depois do Histórico (aulas 1 e 2)
