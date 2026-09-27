@@ -1,6 +1,6 @@
 /*
   Script: 03_Insert_HistStudio.sql
-  Mini curso: Base Studio (salão de beleza) — CSV → Stage → Histórico — aula 3/3
+  Mini curso: Base Studio (salão de beleza) — aula 2 (INSERT no Histórico; mesmo vídeo do CREATE)
   Vídeo: Como criar o Histórico no SQL Server e inserir dados da Stage
   YouTube: https://www.youtube.com/watch?v=oTvTQ4SgFqA
   Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U
@@ -8,6 +8,7 @@
   Como estudar: execute por partes no SSMS (igual ao vídeo)
   Banco: dbTestes (ou outro banco de teste)
   Pré-requisito: 01_BULK_INSERT_CSV_Stage.sql + 02_Create_HistStudio.sql
+  Próximo: 04_Create_DimCliente.sql
 */
 
 USE [dbTestes]

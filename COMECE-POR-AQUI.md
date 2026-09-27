@@ -25,7 +25,7 @@ Cada passo: **por quê** → **o que assistir** → **o que praticar** (quando h
 | 1 | Instalar SQL Server + SSMS | [Importar CSV](./SQL/Curso-Importar-CSV-SQL/) |
 | 2 | SQL do dia a dia (SELECT, filtro, variável) | [Aulas avulsas](./SQL/Aulas-Avulsas/) |
 | 3 | Importar CSV → Stage → procedure | [Importar CSV](./SQL/Curso-Importar-CSV-SQL/) |
-| 3 extra | Mini curso Base Studio: CSV → Stage → Histórico | [Curso-Studio](./SQL/Curso-Studio/) |
+| 3 extra | Mini curso Base Studio: CSV → Stage → Histórico → DimCliente | [Curso-Studio](./SQL/Curso-Studio/) |
 | 4 | Por que automatizar e como organizar o projeto | Negócio |
 | 5 | Stage → Histórico → Dimensão → Fato | [ETL Completo](./SQL/Curso-ETL-Completo/) |
 | 6 | Reforço (JOIN, LOOP, média móvel) + carreira | Avulsas + Negócio |
@@ -93,7 +93,7 @@ Pasta: [`SQL/Curso-Importar-CSV-SQL`](./SQL/Curso-Importar-CSV-SQL/)
 
 ### Prática extra — Mini curso SQL: Base Studio (salão de beleza)
 
-Mesma lógica (CSV → Stage → Histórico), numa base menor de salão de beleza.
+Mesma lógica (CSV → Stage → Histórico → dimensão), numa base menor de salão de beleza.
 
 Playlist: [Mini curso SQL: Base Studio (Salão de beleza)](https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U)  
 CSV: [`BasesFakes/historico_studio.csv`](./BasesFakes/historico_studio.csv)  
@@ -103,8 +103,9 @@ Pasta: [`SQL/Curso-Studio`](./SQL/Curso-Studio/)
 |------|-----------|--------|------|
 | 3.E1 | BULK INSERT + criar a Stage | [`01_BULK_INSERT_CSV_Stage.sql`](./SQL/Curso-Studio/01_BULK_INSERT_CSV_Stage.sql) | [Assistir](https://www.youtube.com/watch?v=5ISu6r8Cad0) |
 | 3.E2 | Criar o Histórico e inserir os dados da Stage | [`02_Create_HistStudio.sql`](./SQL/Curso-Studio/02_Create_HistStudio.sql) · [`03_Insert_HistStudio.sql`](./SQL/Curso-Studio/03_Insert_HistStudio.sql) | [Assistir](https://www.youtube.com/watch?v=oTvTQ4SgFqA) |
+| 3.E3 | Dimensão de cliente e prévia da fato | [`04_Create_DimCliente.sql`](./SQL/Curso-Studio/04_Create_DimCliente.sql) · [`05_Alimentar_DimCliente.sql`](./SQL/Curso-Studio/05_Alimentar_DimCliente.sql) · [`06_Select_Fato.sql`](./SQL/Curso-Studio/06_Select_Fato.sql) | em publicação |
 
-Os scripts 2 e 3 estão no mesmo vídeo.
+Os scripts 2 e 3 estão no mesmo vídeo. Os scripts 4, 5 e 6 estão no vídeo seguinte.
 
 **Próximo passo:** entender automação e organização — depois montar o modelo (histórico / dim / fato).
 

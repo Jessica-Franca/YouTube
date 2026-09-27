@@ -1,6 +1,6 @@
 /*
   Script: 02_Create_HistStudio.sql
-  Mini curso: Base Studio (salão de beleza) — CSV → Stage → Histórico — aula 2/3
+  Mini curso: Base Studio (salão de beleza) — aula 2 (criar o Histórico; mesmo vídeo do INSERT)
   Vídeo: Como criar o Histórico no SQL Server e inserir dados da Stage
   YouTube: https://www.youtube.com/watch?v=oTvTQ4SgFqA
   Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U

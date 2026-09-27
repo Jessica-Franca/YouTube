@@ -1,6 +1,6 @@
 /*
   Script: 01_BULK_INSERT_CSV_Stage.sql
-  Mini curso: Base Studio (salão de beleza) — CSV → Stage → Histórico — aula 1/3
+  Mini curso: Base Studio (salão de beleza) — aula 1 (CSV → Stage)
   Vídeo: Como importar CSV no SQL Server com BULK INSERT (e criar a Stage)
   YouTube: https://www.youtube.com/watch?v=5ISu6r8Cad0
   Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U

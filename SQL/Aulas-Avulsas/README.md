@@ -32,4 +32,4 @@ Como praticar:
 
 O `BULK INSERT` lê o arquivo do **disco da máquina**, não direto do GitHub. Por isso o CSV precisa ser baixado primeiro.
 
-**Continuação:** essa aula é o passo 1 do [mini curso SQL: Base Studio](../Curso-Studio/) ([playlist](https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U)). Próximo vídeo: [criar o Histórico e inserir os dados](https://www.youtube.com/watch?v=oTvTQ4SgFqA).
+**Continuação:** essa aula é o passo 1 do [mini curso SQL: Base Studio](../Curso-Studio/) ([playlist](https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U)). Próximo vídeo: [criar o Histórico e inserir os dados](https://www.youtube.com/watch?v=oTvTQ4SgFqA). Depois: dimensão de cliente e prévia da fato (scripts 04, 05 e 06).
