@@ -1,5 +1,7 @@
 # Carregamento paralelo de tabelas — texto para o YouTube
 
+Vídeo: https://youtu.be/M4kT9QCaCJE
+
 Vídeo sobre a configuração de **Carregamento paralelo de tabelas** no Power BI, com foco em atualização, consumo de memória/CPU e ajuste do paralelismo.
 
 ## Título
