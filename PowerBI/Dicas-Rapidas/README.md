@@ -22,4 +22,4 @@ Aulas práticas e curtas. A maioria é só o link do vídeo. A aula de RLS tem o
 | 12 | Measure Killer: relacionamento e tabela usada como referência | 8:31 | [Assistir](https://www.youtube.com/watch?v=XlLfFLSp320) |
 | 13 | Measure Killer: parâmetro sem uso e relacionamento | 10:53 | [Assistir](https://www.youtube.com/watch?v=2IqS0q5d1u4) |
 | 14 | RLS: segurança em nível de linha (videogame) | 16:02 | [Assistir](https://www.youtube.com/watch?v=zP4t413fshk) |
-| 15 | Carregamento paralelo de tabelas no Power BI — performance no refresh | 9:40 | [Assistir](https://youtu.be/M4kT9QCaCJE) |
+| 15 | Carregamento paralelo de tabelas no Power BI — performance no refresh | 10:06 | [Assistir](https://youtu.be/M4kT9QCaCJE) |
