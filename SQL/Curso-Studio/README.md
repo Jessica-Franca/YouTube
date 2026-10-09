@@ -10,7 +10,7 @@ CSV: `[../../BasesFakes/historico_studio.csv](../../BasesFakes/historico_studio.
 
 Banco de estudo: `dbTestes` (ou outro banco de teste).
 
-**Assistir** abre só aquele vídeo (não a playlist). Os scripts 2 e 3 estão no mesmo vídeo. Os scripts 4, 5 e 6 estão no vídeo seguinte (dimensão de cliente). Os scripts 10, 11 e 12 estão na aula de dimensão de Cidade/UF. Os scripts 10, 11 e 12 estão na aula de dimensão de Cidade/UF.
+**Assistir** abre só aquele vídeo (não a playlist). Os scripts 2 e 3 estão no mesmo vídeo. Os scripts 4, 5 e 6 estão no vídeo seguinte (dimensão de cliente). Os scripts 10, 11 e 12 estão na aula de dimensão de Cidade/UF.
 
 
 | #   | Tema                                                                   | Script                                                           | YouTube                                                 |
