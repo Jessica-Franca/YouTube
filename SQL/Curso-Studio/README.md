@@ -10,7 +10,7 @@ CSV: `[../../BasesFakes/historico_studio.csv](../../BasesFakes/historico_studio.
 
 Banco de estudo: `dbTestes` (ou outro banco de teste).
 
-**Assistir** abre só aquele vídeo (não a playlist). Os scripts 2 e 3 estão no mesmo vídeo. Os scripts 4, 5 e 6 estão no vídeo seguinte (dimensão de cliente). Os scripts 10, 11 e 12 estão na aula de dimensão de Cidade/UF.
+**Assistir** abre só aquele vídeo (não a playlist). Os scripts 2 e 3 estão no mesmo vídeo. Os scripts 4, 5 e 6 estão no vídeo seguinte (dimensão de cliente). Os scripts 10, 11 e 12 estão na aula de dimensão de Cidade/UF. Os scripts 10, 11 e 12 estão na aula de dimensão de Cidade/UF.
 
 
 | #   | Tema                                                                   | Script                                                           | YouTube                                                 |
@@ -27,11 +27,15 @@ Banco de estudo: `dbTestes` (ou outro banco de teste).
 | 10  | Criar `DataMart.DimCidadeUF` (registro -1 + índice único cidade/UF)    | `[10_Create_DimCidadeUF_Studio.sql](./10_Create_DimCidadeUF_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
 | 11  | Alimentar `DimCidadeUF` com cidades e UFs sem duplicar                 | `[11_Alimentar_DimCidadeUF_Studio.sql](./11_Alimentar_DimCidadeUF_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
 | 12  | Atualizar a prévia da fato com `idCidadeUF`                             | `[12_Select_Fato_Studio.sql](./12_Select_Fato_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
+| 10  | Criar `DataMart.DimCidadeUF` (registro -1 + índice único cidade/UF)    | `[10_Create_DimCidadeUF_Studio.sql](./10_Create_DimCidadeUF_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
+| 11  | Alimentar `DimCidadeUF` com cidades e UFs sem duplicar                 | `[11_Alimentar_DimCidadeUF_Studio.sql](./11_Alimentar_DimCidadeUF_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
+| 12  | Atualizar a prévia da fato com `idCidadeUF`                             | `[12_Select_Fato_Studio.sql](./12_Select_Fato_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
 
 
 A aula 1 também aparece em [Aulas avulsas](../Aulas-Avulsas/) (mesmo vídeo). Aqui ela entra na sequência do mini curso.
 
 Título, descrição e capítulos da aula 3: `[aula-03-youtube.md](./aula-03-youtube.md)`.  
+Título, descrição e capítulos da aula de Cidade/UF: `[aula-04-youtube.md](./aula-04-youtube.md)`.  
 Título, descrição e capítulos da aula de Cidade/UF: `[aula-04-youtube.md](./aula-04-youtube.md)`.
 
 ## Como estudar
