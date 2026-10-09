@@ -27,10 +27,6 @@ Banco de estudo: `dbTestes` (ou outro banco de teste).
 | 10  | Criar `DataMart.DimCidadeUF` (registro -1 + índice único cidade/UF)    | `[10_Create_DimCidadeUF_Studio.sql](./10_Create_DimCidadeUF_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
 | 11  | Alimentar `DimCidadeUF` com cidades e UFs sem duplicar                 | `[11_Alimentar_DimCidadeUF_Studio.sql](./11_Alimentar_DimCidadeUF_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
 | 12  | Atualizar a prévia da fato com `idCidadeUF`                             | `[12_Select_Fato_Studio.sql](./12_Select_Fato_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
-| 10  | Criar `DataMart.DimCidadeUF` (registro -1 + índice único cidade/UF)    | `[10_Create_DimCidadeUF_Studio.sql](./10_Create_DimCidadeUF_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
-| 11  | Alimentar `DimCidadeUF` com cidades e UFs sem duplicar                 | `[11_Alimentar_DimCidadeUF_Studio.sql](./11_Alimentar_DimCidadeUF_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
-| 12  | Atualizar a prévia da fato com `idCidadeUF`                             | `[12_Select_Fato_Studio.sql](./12_Select_Fato_Studio.sql)` | [Assistir](https://youtu.be/hELJQuNW204) |
-
 
 A aula 1 também aparece em [Aulas avulsas](../Aulas-Avulsas/) (mesmo vídeo). Aqui ela entra na sequência do mini curso.
 
