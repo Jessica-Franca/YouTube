@@ -5,8 +5,9 @@
   YouTube: https://youtu.be/hELJQuNW204
   Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U
   Objetivo: Incluir idCidadeUF na prévia da fato, mantendo idCliente, quantidade e valor
+  Como estudar: execute depois de carregar as dimensões de cliente e Cidade/UF
   Banco: dbTestes (ou outro banco de teste)
-  Pré-requisito: dimensões DimCliente e DimCidadeUF carregadas
+  Pré-requisito: 05_Alimentar_DimCliente.sql e 11_Alimentar_DimCidadeUF_Studio.sql
 */
 
 SELECT
