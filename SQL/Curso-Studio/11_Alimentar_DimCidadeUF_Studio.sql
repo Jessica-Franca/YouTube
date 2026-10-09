@@ -5,6 +5,7 @@
   YouTube: https://youtu.be/hELJQuNW204
   Playlist: https://www.youtube.com/playlist?list=PLIAM5Wk1ho9U
   Objetivo: Inserir combinações distintas de cidade + UF na DimCidadeUF sem duplicar registros
+  Como estudar: execute depois de criar a dimensão e confira os dados de origem e destino
   Banco: dbTestes (ou outro banco de teste)
   Pré-requisito: 10_Create_DimCidadeUF_Studio.sql e HistStudio carregada
   Próximo: 12_Select_Fato_Studio.sql
