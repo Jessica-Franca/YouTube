@@ -7,6 +7,7 @@
   Objetivo: Criar DataMart.DimCidadeUF, o registro -1 (Não Mapeado) e índice único em cidade + UF
   Como estudar: execute no SSMS depois de carregar o histórico da Base Studio
   Banco: dbTestes (ou outro banco de teste)
+  Pré-requisito: histórico da Base Studio carregado
   Próximo: 11_Alimentar_DimCidadeUF_Studio.sql
 */
 
